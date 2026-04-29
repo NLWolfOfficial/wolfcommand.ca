@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wolf Command — The Knowledge Arsenal</title>
-<meta name="description" content="Every category of life. Tiered guides, kits, and builds. Wolf Approved to Alpha Tier. Printable. Sourced. Real.">
+<meta name="description" content="Ten categories. Three tiers. Every domain of life built right. Wolf Approved to Alpha Tier. Guides, kits, builds — printable, sourced, real.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <style>
@@ -19,11 +19,13 @@
     --dark3: #1A1A1A;
     --silver: #C0C0C0;
     --white: #F5F0E8;
+    --red: #8B0000;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { background: var(--black); color: var(--white); font-family: 'Barlow', sans-serif; overflow-x: hidden; }
 
+  /* NAV */
   nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(0,0,0,0.97); border-bottom: 1px solid var(--blue); display: flex; align-items: center; justify-content: space-between; padding: 0 2rem; height: 56px; }
   .nav-brand { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 2px; text-decoration: none; }
   .nav-brand .nl { color: var(--blue); }
@@ -36,22 +38,18 @@
   .nav-join a:hover { background: #6bc4f5 !important; }
 
   /* HERO */
-  .hero { padding: 10rem 2rem 6rem; max-width: 1100px; margin: 0 auto; }
+  .hero { padding: 10rem 2rem 5rem; max-width: 1100px; margin: 0 auto; }
   .hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-
   .hero-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
   .hero-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(4rem, 9vw, 7.5rem); line-height: 0.88; margin-bottom: 0.75rem; }
   .hero-title .wolf { color: var(--white); }
   .hero-title .command { color: var(--blue); }
   .hero-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 1.1rem; color: var(--silver); letter-spacing: 2px; font-style: italic; margin-bottom: 1.5rem; }
-
   .dual-line { display: flex; gap: 4px; margin-bottom: 1.5rem; }
   .dl-blue { background: var(--blue); height: 3px; width: 50px; }
   .dl-gold { background: var(--gold); height: 3px; width: 50px; }
-
   .hero-text { font-size: 1rem; line-height: 1.8; color: #888; margin-bottom: 2rem; }
   .hero-text strong { color: var(--white); }
-
   .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
   .btn-blue { display: inline-block; background: var(--blue); color: var(--black); font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 1rem 2rem; text-decoration: none; transition: all 0.2s; clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 0 100%); }
   .btn-blue:hover { background: #6bc4f5; transform: translateY(-2px); }
@@ -63,71 +61,74 @@
   .tier-panel-header { background: var(--dark3); padding: 1rem 1.5rem; border-bottom: 2px solid var(--blue); }
   .tier-panel-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--blue); letter-spacing: 2px; }
   .tier-panel-sub { font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; color: #555; letter-spacing: 1px; }
-
   .tier-row { padding: 1.5rem; border-bottom: 1px solid #0f0f0f; display: flex; align-items: flex-start; gap: 1rem; transition: background 0.2s; }
   .tier-row:last-child { border-bottom: none; }
   .tier-row:hover { background: rgba(74,178,239,0.03); }
-
   .tier-badge-pill { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.3rem 0.7rem; border: 1px solid var(--gold); color: var(--gold); white-space: nowrap; flex-shrink: 0; margin-top: 3px; }
+  .tier-badge-pill.red { border-color: var(--red); color: #cc3333; }
   .tier-label { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--white); line-height: 1; margin-bottom: 0.2rem; }
   .tier-desc { font-size: 0.85rem; color: #555; line-height: 1.4; }
   .tier-access { font-family: 'Barlow Condensed', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-top: 0.35rem; }
 
-  /* HOW IT WORKS */
-  .how { background: var(--dark2); border-top: 1px solid var(--blue); border-bottom: 1px solid #1a1a1a; padding: 6rem 2rem; }
-  .how-inner { max-width: 1100px; margin: 0 auto; }
-
+  /* BADGES SECTION */
+  .badges { background: var(--dark2); border-top: 1px solid var(--blue); border-bottom: 1px solid #1a1a1a; padding: 5rem 2rem; }
+  .badges-inner { max-width: 1100px; margin: 0 auto; }
   .section-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.75rem; }
   .section-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1; }
 
+  .badge-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--blue); border: 1px solid var(--blue); margin-top: 2.5rem; }
+  .badge-card { background: var(--dark); padding: 2rem 1.5rem; text-align: center; }
+  .badge-card.gold-top { border-top: 3px solid var(--gold); }
+  .badge-card.red-top { border-top: 3px solid var(--red); }
+  .badge-stamp { display: inline-block; font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.35rem 0.8rem; margin-bottom: 1rem; border: 2px solid; }
+  .badge-card.gold-top .badge-stamp { border-color: var(--gold); color: var(--gold); }
+  .badge-card.red-top .badge-stamp { border-color: var(--red); color: #cc3333; }
+  .badge-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; line-height: 1; margin-bottom: 0.5rem; }
+  .badge-card.gold-top .badge-name { color: var(--white); }
+  .badge-card.red-top .badge-name { color: #cc3333; }
+  .badge-desc { font-size: 0.85rem; color: #555; line-height: 1.5; }
+
+  /* CATEGORIES */
+  .categories { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+
+  .cat-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+
+  .cat-group { border: 1px solid #1a1a1a; overflow: hidden; transition: border-color 0.2s; }
+  .cat-group:hover { border-color: rgba(74,178,239,0.3); }
+
+  .cat-header { background: var(--dark3); padding: 1.2rem 1.5rem; border-bottom: 2px solid var(--blue); display: flex; align-items: center; gap: 1rem; }
+  .cat-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: rgba(74,178,239,0.25); line-height: 1; flex-shrink: 0; }
+  .cat-header-text {}
+  .cat-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); margin-bottom: 0.2rem; }
+  .cat-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--white); line-height: 1; }
+
+  .cat-body { padding: 1.2rem 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .cat-sub { padding: 0.6rem 0.75rem; font-family: 'Barlow Condensed', sans-serif; font-size: 0.92rem; color: #666; display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid #0f0f0f; border-right: 1px solid #0f0f0f; transition: color 0.2s, background 0.2s; }
+  .cat-sub:hover { color: var(--silver); background: rgba(74,178,239,0.03); }
+  .cat-sub::before { content: '—'; color: var(--gold); font-size: 0.65rem; flex-shrink: 0; }
+  .cat-sub:nth-child(2n) { border-right: none; }
+  .cat-sub:nth-last-child(-n+2) { border-bottom: none; }
+
+  .coming-dot { margin-left: auto; width: 6px; height: 6px; border-radius: 50%; background: rgba(74,178,239,0.3); flex-shrink: 0; }
+
+  /* HOW IT WORKS */
+  .how { background: var(--dark2); border-top: 1px solid var(--gold); border-bottom: 1px solid #1a1a1a; padding: 6rem 2rem; }
+  .how-inner { max-width: 1100px; margin: 0 auto; }
   .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--blue); border: 1px solid var(--blue); margin-top: 2.5rem; }
   .how-card { background: var(--dark); padding: 2.5rem 2rem; }
-  .how-num { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: rgba(74,178,239,0.15); line-height: 1; margin-bottom: 0.5rem; }
+  .how-num { font-family: 'Bebas Neue', sans-serif; font-size: 4rem; color: rgba(74,178,239,0.12); line-height: 1; margin-bottom: 0.5rem; }
   .how-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--white); margin-bottom: 0.75rem; }
   .how-desc { font-size: 0.95rem; color: #555; line-height: 1.6; }
   .how-desc strong { color: var(--silver); }
 
-  /* CATEGORIES */
-  .categories { padding: 6rem 2rem; max-width: 1100px; margin: 0 auto; }
-
-  .cat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
-
-  .cat-group { border: 1px solid #1a1a1a; overflow: hidden; }
-  .cat-header { background: var(--dark3); padding: 1rem 1.2rem; border-bottom: 2px solid var(--blue); display: flex; align-items: center; gap: 0.75rem; }
-  .cat-icon { font-size: 1.2rem; }
-  .cat-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--blue); line-height: 1; }
-
-  .cat-items { list-style: none; }
-  .cat-items li { padding: 0.75rem 1.2rem; border-bottom: 1px solid #0f0f0f; font-family: 'Barlow Condensed', sans-serif; font-size: 0.95rem; color: #666; display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; transition: color 0.2s, background 0.2s; }
-  .cat-items li:last-child { border-bottom: none; }
-  .cat-items li:hover { color: var(--silver); background: rgba(74,178,239,0.03); }
-  .cat-items li::before { content: '—'; color: var(--gold); font-size: 0.7rem; flex-shrink: 0; }
-
-  .coming-tag { font-family: 'Barlow Condensed', sans-serif; font-size: 0.6rem; font-weight: 700; letter-spacing: 2px; color: var(--blue); border: 1px solid rgba(74,178,239,0.3); padding: 0.1rem 0.4rem; opacity: 0.5; flex-shrink: 0; }
-
-  /* TIERS EXPLAIN */
-  .tiers-explain { background: var(--dark2); border-top: 1px solid #1a1a1a; border-bottom: 1px solid var(--gold); padding: 6rem 2rem; }
-  .tiers-inner { max-width: 1100px; margin: 0 auto; }
-
-  .tiers-table { display: grid; grid-template-columns: 1fr; gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; margin-top: 2.5rem; }
-  .tiers-row { background: var(--dark); padding: 1.5rem 2rem; display: grid; grid-template-columns: 180px 120px 1fr; gap: 2rem; align-items: center; border-left: 3px solid transparent; transition: border-color 0.2s; }
-  .tiers-row:hover { border-left-color: var(--blue); }
-  .tiers-row.header { background: var(--dark3); border-left-color: var(--blue) !important; }
-  .tiers-row.header .tiers-col { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--blue); }
-  .tiers-badge { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.3rem 0.7rem; border: 1px solid var(--gold); color: var(--gold); display: inline-block; }
-  .tiers-access { font-family: 'Bebas Neue', sans-serif; font-size: 1.2rem; color: var(--blue); }
-  .tiers-desc { font-size: 0.9rem; color: #666; line-height: 1.5; }
-
-  /* EARLY */
-  .early { padding: 8rem 2rem; text-align: center; position: relative; overflow: hidden; }
+  /* EARLY CTA */
+  .early { padding: 7rem 2rem; text-align: center; position: relative; overflow: hidden; }
   .early::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at center, rgba(74,178,239,0.06) 0%, transparent 70%); pointer-events: none; }
-  .early-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 8vw, 7rem); line-height: 0.9; margin-bottom: 1.5rem; }
+  .early-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(3rem, 7vw, 6rem); line-height: 0.9; margin-bottom: 1.5rem; }
   .early-title .get { color: var(--white); }
   .early-title .in { color: var(--blue); }
-  .early-title .early { color: var(--gold); }
-  .early-text { font-size: 1.05rem; color: #666; max-width: 560px; margin: 0 auto 3rem; line-height: 1.7; }
+  .early-text { font-size: 1.05rem; color: #555; max-width: 560px; margin: 0 auto 2.5rem; line-height: 1.7; }
   .early-text strong { color: var(--white); }
-
   .join-btn { display: inline-flex; align-items: center; gap: 1rem; background: var(--blue); color: var(--black); font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; letter-spacing: 3px; padding: 1.2rem 3rem; text-decoration: none; transition: all 0.25s; clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%); }
   .join-btn:hover { background: #6bc4f5; transform: translateY(-3px); box-shadow: 0 10px 40px rgba(74,178,239,0.25); }
 
@@ -142,15 +143,19 @@
   .footer-links a:hover { color: var(--blue); }
   .footer-copy { font-size: 0.8rem; color: #333; }
 
+  @media (max-width: 1000px) { .cat-grid { grid-template-columns: 1fr; } }
   @media (max-width: 900px) {
     .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
     .how-grid { grid-template-columns: 1fr; }
-    .cat-grid { grid-template-columns: repeat(2, 1fr); }
-    .tiers-row { grid-template-columns: 1fr; gap: 0.5rem; }
+    .badge-row { grid-template-columns: repeat(2, 1fr); }
     .nav-links { display: none; }
   }
-  @media (max-width: 600px) {
-    .cat-grid { grid-template-columns: 1fr; }
+  @media (max-width: 500px) {
+    .badge-row { grid-template-columns: 1fr; }
+    .cat-body { grid-template-columns: 1fr; }
+    .cat-sub { border-right: none !important; }
+    .cat-sub:nth-last-child(-n+2) { border-bottom: 1px solid #0f0f0f; }
+    .cat-sub:last-child { border-bottom: none; }
   }
 </style>
 </head>
@@ -167,6 +172,7 @@
   </ul>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
@@ -175,28 +181,28 @@
       <p class="hero-sub">The Knowledge Arsenal</p>
       <div class="dual-line"><span class="dl-blue"></span><span class="dl-gold"></span></div>
       <p class="hero-text">
-        <strong>Every category of life. Built right.</strong><br><br>
-        Click a category. See all three tiers side by side —
-        Wolf Approved, Wolf Standard, Alpha Tier.
-        Estimated price range. Sourced gear lists linking to Wolf Standard reviews.
-        Downloadable PDF so you can print it, shop it, build it.
+        <strong>Ten categories. Three tiers. Every domain of life.</strong><br><br>
+        Pick a category. See all three tiers side by side.
+        Wolf Approved entry build to Alpha Tier elite build.
+        Estimated cost. Sourced gear linked to Wolf Standard reviews.
+        Downloadable PDF. Print it. Shop it. Build it.
       </p>
       <div class="hero-btns">
         <a href="#categories" class="btn-blue">See All Categories</a>
-        <a href="https://discord.gg/Yy9JabAwEr" class="btn-gold-outline">Join The Pack</a>
+        <a href="https://wolfstandard.ca" class="btn-gold-outline">Wolf Standard Reviews</a>
       </div>
     </div>
 
     <div class="tier-panel">
       <div class="tier-panel-header">
-        <div class="tier-panel-title">Three Tiers Per Category</div>
-        <div class="tier-panel-sub">Every category. Same system. Always.</div>
+        <div class="tier-panel-title">Four Outcomes. Every Category.</div>
+        <div class="tier-panel-sub">Same badge system as Wolf Standard. Always.</div>
       </div>
       <div class="tier-row">
         <div class="tier-badge-pill">Wolf Approved</div>
         <div>
           <div class="tier-label">Entry Build</div>
-          <div class="tier-desc">Solid gear. Accessible price. Gets the job done right without overbuilding.</div>
+          <div class="tier-desc">Solid gear. Accessible price. Gets the job done right.</div>
           <div class="tier-access">Free — Always</div>
         </div>
       </div>
@@ -204,7 +210,7 @@
         <div class="tier-badge-pill">Wolf Standard</div>
         <div>
           <div class="tier-label">Full Build</div>
-          <div class="tier-desc">Best choice for most people. Full specs, sourced gear, estimated cost.</div>
+          <div class="tier-desc">Best choice for most. Full specs, sourced gear, estimated cost.</div>
           <div class="tier-access">Free / Light Gate</div>
         </div>
       </div>
@@ -212,25 +218,237 @@
         <div class="tier-badge-pill">Alpha Tier</div>
         <div>
           <div class="tier-label">Elite Build</div>
-          <div class="tier-desc">No compromises. How NL Wolf would build it with zero budget limit.</div>
+          <div class="tier-desc">No compromises. How NL Wolf builds it with zero budget limits.</div>
           <div class="tier-access">Premium</div>
+        </div>
+      </div>
+      <div class="tier-row">
+        <div class="tier-badge-pill red">Wolf Rejected</div>
+        <div>
+          <div class="tier-label">Cut From The Build</div>
+          <div class="tier-desc">Tested in the field. Failed. Not in any tier for a reason.</div>
+          <div class="tier-access">Always Documented</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ALL FOUR BADGES -->
+<section class="badges">
+  <div class="badges-inner">
+    <p class="section-label">The Badge System</p>
+    <h2 class="section-title">Four Outcomes.<br>One Per Item. Always.</h2>
+    <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">Every item in every build gets exactly one badge. No partial credit. No exceptions.</p>
+
+    <div class="badge-row">
+      <div class="badge-card gold-top">
+        <div class="badge-stamp">Wolf Approved</div>
+        <div class="badge-name">Wolf Approved</div>
+        <p class="badge-desc">Solid. Reliable. Real value. Best entry or mid-range option in its class.</p>
+      </div>
+      <div class="badge-card gold-top">
+        <div class="badge-stamp">Wolf Standard</div>
+        <div class="badge-name">Wolf Standard</div>
+        <p class="badge-desc">Best-in-class for most people. The default. What you buy when you want it right.</p>
+      </div>
+      <div class="badge-card gold-top">
+        <div class="badge-stamp">Alpha Tier</div>
+        <div class="badge-name">Alpha Tier</div>
+        <p class="badge-desc">Overbuilt. Elite. Buy once for life. The best that exists, period.</p>
+      </div>
+      <div class="badge-card red-top">
+        <div class="badge-stamp">Wolf Rejected</div>
+        <div class="badge-name">Wolf Rejected</div>
+        <p class="badge-desc">Tested. Failed real use. Cut from every build. Stay away.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<section class="categories" id="categories">
+  <p class="section-label">The Full Arsenal</p>
+  <h2 class="section-title">Ten Categories.<br>Three Tiers Each.</h2>
+  <p style="color:#555; font-size:0.9rem; margin-top:0.5rem; margin-bottom:0;">Click a category when it goes live to see all three tier builds side by side.</p>
+
+  <div class="cat-grid">
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">01</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Base Camp</div>
+          <div class="cat-name">Home & Daily Living</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Kitchen & Cooking<span class="coming-dot"></span></div>
+        <div class="cat-sub">Bedroom & Sleep Systems<span class="coming-dot"></span></div>
+        <div class="cat-sub">Power & Infrastructure<span class="coming-dot"></span></div>
+        <div class="cat-sub">Cleaning & Maintenance<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">02</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Mobility</div>
+          <div class="cat-name">Vehicles & Overlanding</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Truck & 4x4 Builds<span class="coming-dot"></span></div>
+        <div class="cat-sub">Recovery & Trail Gear<span class="coming-dot"></span></div>
+        <div class="cat-sub">Storage & Organization<span class="coming-dot"></span></div>
+        <div class="cat-sub">Maintenance & Tools<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">03</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Command Center</div>
+          <div class="cat-name">Tech & Connectivity</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">PC Builds & Peripherals<span class="coming-dot"></span></div>
+        <div class="cat-sub">Homelab & Networking<span class="coming-dot"></span></div>
+        <div class="cat-sub">Software & Tools<span class="coming-dot"></span></div>
+        <div class="cat-sub">Mobile & Accessories<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">04</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Field Kit</div>
+          <div class="cat-name">EDC & Everyday Carry</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Knives & Multitools<span class="coming-dot"></span></div>
+        <div class="cat-sub">Bags & Packs<span class="coming-dot"></span></div>
+        <div class="cat-sub">Lighting & Illumination<span class="coming-dot"></span></div>
+        <div class="cat-sub">Carry & Tools<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">05</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Survival & Prep</div>
+          <div class="cat-name">Off-Grid & Emergency</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Bug Out Bags<span class="coming-dot"></span></div>
+        <div class="cat-sub">Food & Water Storage<span class="coming-dot"></span></div>
+        <div class="cat-sub">Medical & First Aid<span class="coming-dot"></span></div>
+        <div class="cat-sub">Shelter & Fire<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">06</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Body Armor</div>
+          <div class="cat-name">Health & Recovery</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Fitness & Strength Gear<span class="coming-dot"></span></div>
+        <div class="cat-sub">Recovery Tools<span class="coming-dot"></span></div>
+        <div class="cat-sub">Supplements & Nutrition<span class="coming-dot"></span></div>
+        <div class="cat-sub">Sleep & Restoration<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">07</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Wolf Standard Finance</div>
+          <div class="cat-name">Finance & Investing</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Investing & Markets<span class="coming-dot"></span></div>
+        <div class="cat-sub">Budgeting & Management<span class="coming-dot"></span></div>
+        <div class="cat-sub">Retirement & Long-Term<span class="coming-dot"></span></div>
+        <div class="cat-sub">Income & Side Hustles<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">08</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Outdoors & Field</div>
+          <div class="cat-name">Fishing, Hunting & Wilderness</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Fishing Gear & Tackle<span class="coming-dot"></span></div>
+        <div class="cat-sub">Hunting & Field Gear<span class="coming-dot"></span></div>
+        <div class="cat-sub">Camping & Backcountry<span class="coming-dot"></span></div>
+        <div class="cat-sub">Navigation & Skills<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">09</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Gaming & Strategy</div>
+          <div class="cat-name">Digital Battlefield</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Strategy & Grand Strategy<span class="coming-dot"></span></div>
+        <div class="cat-sub">FPS & Tactical Shooters<span class="coming-dot"></span></div>
+        <div class="cat-sub">Tower Defense & RTS<span class="coming-dot"></span></div>
+        <div class="cat-sub">Gaming Peripherals & Setup<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+    <div class="cat-group">
+      <div class="cat-header">
+        <div class="cat-num">10</div>
+        <div class="cat-header-text">
+          <div class="cat-tag">Downloads & Archive</div>
+          <div class="cat-name">Wolf Standard Library</div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-sub">Free Guides & Checklists<span class="coming-dot"></span></div>
+        <div class="cat-sub">Build PDFs by Tier<span class="coming-dot"></span></div>
+        <div class="cat-sub">Wolf Standard Stamps<span class="coming-dot"></span></div>
+        <div class="cat-sub">Cost Lists by Tier<span class="coming-dot"></span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
 <section class="how">
   <div class="how-inner">
     <p class="section-label">How It Works</p>
     <h2 class="section-title">Pick. Compare. Build.</h2>
-    <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">Each category page shows all three tiers. You pick your level and build from there.</p>
+    <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">Every category page shows all three tiers. You pick your level and build from there.</p>
 
     <div class="how-grid">
       <div class="how-card">
         <div class="how-num">01</div>
         <div class="how-title">Pick A Category</div>
-        <p class="how-desc">Home, vehicles, tech, survival, EDC. <strong>Click the category</strong> you're building out.</p>
+        <p class="how-desc">Ten categories covering every domain of life. <strong>Click the one you're building out.</strong></p>
       </div>
       <div class="how-card">
         <div class="how-num">02</div>
@@ -240,121 +458,19 @@
       <div class="how-card">
         <div class="how-num">03</div>
         <div class="how-title">Download & Build</div>
-        <p class="how-desc"><strong>Printable PDF checklist</strong> for every tier. Shop it, check items off, build it right.</p>
+        <p class="how-desc"><strong>Printable PDF checklist</strong> for your chosen tier. Shop it, check it off, build it right.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="categories" id="categories">
-  <p class="section-label">The Arsenal</p>
-  <h2 class="section-title">Every Category.<br>All Three Tiers.</h2>
-  <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">Categories building now. Click a category when it's live to see all three tier builds.</p>
-
-  <div class="cat-grid">
-    <div class="cat-group">
-      <div class="cat-header"><span class="cat-icon">🏠</span><span class="cat-name">Home Command</span></div>
-      <ul class="cat-items">
-        <li>Kitchen <span class="coming-tag">Coming</span></li>
-        <li>Bedroom <span class="coming-tag">Coming</span></li>
-        <li>Power & Infrastructure <span class="coming-tag">Coming</span></li>
-        <li>Home Network <span class="coming-tag">Coming</span></li>
-        <li>Security <span class="coming-tag">Coming</span></li>
-      </ul>
-    </div>
-    <div class="cat-group">
-      <div class="cat-header"><span class="cat-icon">🚛</span><span class="cat-name">Vehicle Command</span></div>
-      <ul class="cat-items">
-        <li>Truck & 4x4 <span class="coming-tag">Coming</span></li>
-        <li>Recovery Gear <span class="coming-tag">Coming</span></li>
-        <li>Lighting & Mods <span class="coming-tag">Coming</span></li>
-        <li>Bed & Storage <span class="coming-tag">Coming</span></li>
-        <li>Maintenance Kits <span class="coming-tag">Coming</span></li>
-      </ul>
-    </div>
-    <div class="cat-group">
-      <div class="cat-header"><span class="cat-icon">🖥️</span><span class="cat-name">Tech Command</span></div>
-      <ul class="cat-items">
-        <li>Networking Builds <span class="coming-tag">Coming</span></li>
-        <li>Homelab Setup <span class="coming-tag">Coming</span></li>
-        <li>PC & Peripherals <span class="coming-tag">Coming</span></li>
-        <li>Software Kits <span class="coming-tag">Coming</span></li>
-        <li>Security Stack <span class="coming-tag">Coming</span></li>
-      </ul>
-    </div>
-    <div class="cat-group">
-      <div class="cat-header"><span class="cat-icon">🎒</span><span class="cat-name">Survival & Prep</span></div>
-      <ul class="cat-items">
-        <li>Bug Out Bag Builds <span class="coming-tag">Coming</span></li>
-        <li>Food & Water <span class="coming-tag">Coming</span></li>
-        <li>Medical Kits <span class="coming-tag">Coming</span></li>
-        <li>Shelter & Fire <span class="coming-tag">Coming</span></li>
-        <li>72-Hour Plans <span class="coming-tag">Coming</span></li>
-      </ul>
-    </div>
-    <div class="cat-group">
-      <div class="cat-header"><span class="cat-icon">🔦</span><span class="cat-name">EDC Command</span></div>
-      <ul class="cat-items">
-        <li>Everyday Carry <span class="coming-tag">Coming</span></li>
-        <li>Knives & Multitools <span class="coming-tag">Coming</span></li>
-        <li>Flashlights <span class="coming-tag">Coming</span></li>
-        <li>Bags & Packs <span class="coming-tag">Coming</span></li>
-        <li>Wallets & Org <span class="coming-tag">Coming</span></li>
-      </ul>
-    </div>
-    <div class="cat-group">
-      <div class="cat-header"><span class="cat-icon">📥</span><span class="cat-name">Downloads Hub</span></div>
-      <ul class="cat-items">
-        <li>Free Checklists <span class="coming-tag">Coming</span></li>
-        <li>Printable Gear Lists <span class="coming-tag">Coming</span></li>
-        <li>Build Guides PDF <span class="coming-tag">Coming</span></li>
-        <li>Reference Sheets <span class="coming-tag">Coming</span></li>
-        <li>Common Links Library <span class="coming-tag">Coming</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="tiers-explain">
-  <div class="tiers-inner">
-    <p class="section-label">The Tier System</p>
-    <h2 class="section-title">Same Badges.<br>Every Category.</h2>
-    <p style="color:#555; font-size:0.9rem; margin-top:0.5rem;">The same badge system from Wolf Standard applies here. Consistent language across the whole ecosystem.</p>
-
-    <div class="tiers-table">
-      <div class="tiers-row header">
-        <div class="tiers-col">Badge</div>
-        <div class="tiers-col">Access</div>
-        <div class="tiers-col">What You Get</div>
-      </div>
-      <div class="tiers-row">
-        <div><span class="tiers-badge">Wolf Approved</span></div>
-        <div class="tiers-access">Free</div>
-        <div class="tiers-desc">Entry-level build. Solid gear picks. Accessible price range. Printable checklist. Good for anyone starting out or on a budget.</div>
-      </div>
-      <div class="tiers-row">
-        <div><span class="tiers-badge">Wolf Standard</span></div>
-        <div class="tiers-access">Free / Light</div>
-        <div class="tiers-desc">Full build specs. Sourced gear list with Wolf Standard badged items. Estimated total cost. Best choice for most people building it right.</div>
-      </div>
-      <div class="tiers-row">
-        <div><span class="tiers-badge">Alpha Tier</span></div>
-        <div class="tiers-access">Premium</div>
-        <div class="tiers-desc">Complete elite build. Exact spec. Exact source. No compromises. How NL Wolf would build it if money wasn't the constraint.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
+<!-- EARLY CTA -->
 <section class="early">
-  <h2 class="early-title">
-    <span class="get">GET IN </span><span class="in">EARLY</span>
-  </h2>
+  <h2 class="early-title"><span class="get">GET IN </span><span class="in">EARLY</span></h2>
   <p class="early-text">
     <strong>Wolf Command is being built right now.</strong>
     First category pages drop soon. Join the pack to get notified
-    when each one goes live. Early pack members help decide
-    which categories get built first.
+    and help decide which categories launch first.
   </p>
   <a href="https://discord.gg/Yy9JabAwEr" class="join-btn">JOIN THE PACK →</a>
 </section>
@@ -369,7 +485,7 @@
     <a href="https://discord.gg/Yy9JabAwEr">Discord</a>
     <a href="mailto:wolf@nlwolf.com">wolf@nlwolf.com</a>
   </div>
-  <p class="footer-copy">Wolf Command — NL Wolf — Gander, Newfoundland</p>
+  <p class="footer-copy">Wolf Command — NL Wolf — Gander, Newfoundland — Built by Tim Hill</p>
 </footer>
 
 </body>
