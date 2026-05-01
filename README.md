@@ -232,7 +232,7 @@ Every content page (guides, checklists, reviews) MUST also include a **Print / S
 All 4 site index pages must contain a "Latest From The Pack" strip showing the 3 most recently published items across the entire ecosystem.
 
 Rules:
-- Strip sits directly above the footer on all 4 index pages
+- Strip sits immediately after the hero section on all 4 index pages — NOT at the bottom, NOT above the footer. After the hero. First thing visible after the intro.
 - Shows exactly 3 items — most recent first
 - Each item has: NEW gold tag (on the two most recent), site badge, title, short description, direct link
 - Remove the NEW tag from the oldest of the 3 when a new item is added
