@@ -244,6 +244,31 @@ Rules:
 
 ---
 
+## 17. BLOG POST RULE (MANDATORY — 2026-05-01)
+
+Every guide, review, or significant piece of content published anywhere in the ecosystem MUST have a matching blog post on nlwolf.com.
+
+**Flow for every new content piece:**
+1. Build the content page (review, guide, etc.) on its site
+2. Build a blog post HTML file on nlwolf.com linking to it
+3. Add a blog card to the `#blog` section in nlwolf.com `index.html`
+4. Update the Latest From The Pack strip on all 4 index pages
+5. Post to all socials — Discord, Facebook, X, Reddit, YouTube Community
+
+**Blog post file naming:** `topic-name.html` — lowercase, hyphens, same rules as all other HTML files
+**Blog post location:**
+- GitHub: `github.com/NLWolfOfficial/nlwolf.com/upload/main`
+- Local: `W:\NL Wolf\Blog\[filename].html`
+
+**Blog post must include:**
+- Matching nav and footer to nlwolf.com
+- Print / Save as PDF button
+- Link back to `nlwolf.com/#blog`
+- Direct CTA link to the content page it references
+- OG meta tags for social sharing
+
+---
+
 ## 15. READABILITY STANDARDS (LOCKED — 2026-05-01)
 
 These are non-negotiable across every page on all four sites. No exceptions.
