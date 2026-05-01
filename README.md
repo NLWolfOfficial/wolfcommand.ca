@@ -1,5 +1,5 @@
 # NL WOLF PROJECT — OPERATING SYSTEM
-Last updated: 2026-04-30
+Last updated: 2026-05-01
 
 This repository contains the NL Wolf ecosystem.  
 All AI assistants (Claude, ChatGPT, etc.) working in this project MUST follow this README as the source of truth for structure, naming, and workflow.
@@ -23,21 +23,17 @@ No redesigning, no optimization suggestions unless explicitly requested.
 
 | Site | Repo | Purpose |
 |------|------|---------|
-| nlwolf.com | NLWolfOfficial/nlwolf.com | Identity Hub |
-| wolfstandard.ca | NLWolfOfficial/wolfstandard.ca | Reviews + scoring system |
-| wolfpacklounge.com | NLWolfOfficial/wolfpacklounge.com | Community hub |
-| wolfcommand.ca | NLWolfOfficial/wolfcommand.ca | Gear database |
+| nlwolf.com | nlwolf_v3 | Identity Hub |
+| wolfstandard.ca | wolfstandard.ca | Reviews + scoring system |
+| wolfpacklounge.com | wolfpacklounge_v2 | Community hub |
+| wolfcommand.ca | wolfcommand_v4 | Gear database |
 
 **Hosting:** GitHub — NLWolfOfficial  
 **Deployment:** Cloudflare Pages — auto-deploys on every commit. No manual deploy needed.
 
 **GitHub upload URLs:**
-- `github.com/NLWolfOfficial/nlwolf.com/upload/main`
-- `github.com/NLWolfOfficial/wolfstandard.ca/upload/main`
-- `github.com/NLWolfOfficial/wolfpacklounge.com/upload/main`
-- `github.com/NLWolfOfficial/wolfcommand.ca/upload/main`
-
-**Images folder:** same URL + `/images`
+- Root: `github.com/NLWolfOfficial/[REPO]/upload/main`
+- Images: `github.com/NLWolfOfficial/[REPO]/upload/main/images`
 
 ---
 
@@ -184,6 +180,24 @@ If a request conflicts with it:
 - Flag the conflict
 - Do not silently override rules
 - Wait for direction
+
+---
+
+## 13. CODE & BUILD APPROVAL RULE (MANDATORY — 2026-05-01)
+
+No AI assistant may generate, output, or modify ANY HTML file, code file, or script unless Tim has replied in that exact conversation turn with:
+
+**APPROVED**
+
+That exact word. Nothing else qualifies.
+
+Rules:
+- Asking confirmation questions does NOT equal approval to build
+- Context and conversation flow do NOT equal approval to build
+- If APPROVED has not been typed, STOP and WAIT
+- No exceptions. No "he probably means go ahead." STOP and WAIT.
+
+Violation of this rule damages live sites and wastes resources. It will not be tolerated.
 
 ---
 
