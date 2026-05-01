@@ -223,6 +223,25 @@ Rules:
 
 This rule applies to the wolfstandard-review-template.html as well — that file needs the print block added the next time it is touched.
 
+Every content page (guides, checklists, reviews) MUST also include a **Print / Save as PDF button** that triggers `window.print()`. Button must be hidden on print using `@media print { .print-btn { display: none; } }`.
+
+---
+
+## 14B. LATEST FROM THE PACK STRIP (MANDATORY — 2026-05-01)
+
+All 4 site index pages must contain a "Latest From The Pack" strip showing the 3 most recently published items across the entire ecosystem.
+
+Rules:
+- Strip sits directly above the footer on all 4 index pages
+- Shows exactly 3 items — most recent first
+- Each item has: NEW gold tag (on the two most recent), site badge, title, short description, direct link
+- Remove the NEW tag from the oldest of the 3 when a new item is added
+- Update all 4 index pages every time new content is published anywhere in the ecosystem
+- Current 3 items (update this list when new content is published):
+  1. Wolf Command — Offline Sovereign Security (keepass-yubikey-setup-guide.html)
+  2. Wolf Standard — Defense Grid 1 & 2 (defense-grid-1-2.html)
+  3. Wolf Standard — Leatherman Skeletool CX (leatherman-skeletool-cx.html)
+
 ---
 
 ## 15. READABILITY STANDARDS (LOCKED — 2026-05-01)
