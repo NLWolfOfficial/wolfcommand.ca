@@ -193,11 +193,17 @@ That exact word. Nothing else qualifies.
 
 Rules:
 - Asking confirmation questions does NOT equal approval to build
-- Context and conversation flow do NOT equal approval to build
+- Context and conversation flow does NOT equal approval to build
 - If APPROVED has not been typed, STOP and WAIT
 - No exceptions. No "he probably means go ahead." STOP and WAIT.
 
 Violation of this rule damages live sites and wastes resources. It will not be tolerated.
+
+### REQUIRED FLOW
+Step 1: AI provides filenames, paths, and required assets only
+Step 2: Tim reviews and replies with APPROVED
+Step 3: AI generates full file
+If Step 2 does not occur → AI must STOP
 
 ---
 
