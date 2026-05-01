@@ -224,4 +224,32 @@ This rule applies to the wolfstandard-review-template.html as well — that file
 
 ---
 
+## 15. READABILITY STANDARDS (LOCKED — 2026-05-01)
+
+These are non-negotiable across every page on all four sites. No exceptions.
+
+**Text colours — minimum values:**
+- Body / description text: `#c0c0c0` minimum. Never below this.
+- Hero / intro text: `#c0c0c0` minimum.
+- Section description text: `#c0c0c0` minimum.
+- Item description text: `#c0c0c0` minimum.
+- Labels / tags / meta text: `#555555` minimum.
+
+**Section numbers (01, 02, 03 etc):**
+- Always full `#4AB2EF` — NO opacity reduction. Ever.
+
+**Font sizes — minimums:**
+- Body / description text: `0.95rem` minimum. Never smaller.
+- Item titles: `1.1rem` minimum.
+- Section description: `1rem` minimum.
+
+**Spacing:**
+- Section margin-bottom: `4.5rem` minimum.
+- Checklist item padding: `1.4rem 1.5rem` minimum.
+- Step list gap: `2rem` minimum.
+
+**Every new file built from any template must meet these standards before it is considered complete.**
+
+---
+
 ## END OF SYSTEM
