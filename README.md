@@ -207,4 +207,21 @@ If Step 2 does not occur → AI must STOP
 
 ---
 
+## 14. PRINT / PDF RULE (MANDATORY — 2026-05-01)
+
+Every guide, checklist, and review page across all four sites MUST include a `@media print` CSS block.
+
+Rules:
+- White background on print — no black, no dark colours
+- Black or dark grey text on print — readable without colour
+- Nav, footer, breadcrumb hidden on print
+- Sidebar hidden on print — main content only
+- Checklist boxes remain as printable squares
+- `page-break-inside: avoid` on all checklist items, steps, and warning blocks
+- This block is required in: all wolfcommand guides, all wolfstandard reviews, all wolfpacklounge pages, any content page on any of the four sites
+
+This rule applies to the wolfstandard-review-template.html as well — that file needs the print block added the next time it is touched.
+
+---
+
 ## END OF SYSTEM

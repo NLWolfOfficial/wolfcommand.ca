@@ -458,6 +458,42 @@
     color: #333;
   }
 
+  /* ── PRINT / SAVE AS PDF ── */
+  @media print {
+    * { background: #fff !important; color: #000 !important; box-shadow: none !important; text-shadow: none !important; }
+    nav, .nav-join, .breadcrumb, footer { display: none !important; }
+    body { font-size: 11pt; }
+    .guide-hero { padding: 2rem 0 1.5rem; border-bottom: 1px solid #ccc; margin-top: 0; }
+    .guide-body { display: block; padding: 1.5rem 0; }
+    .sidebar { display: none; }
+    .guide-title { font-size: 2.5rem; color: #000 !important; }
+    .guide-subtitle { color: #444 !important; }
+    .verdict-line { border-left: 3px solid #000; color: #000 !important; }
+    .category-tag, .type-tag { border: 1px solid #000 !important; color: #000 !important; }
+    .guide-date { color: #444 !important; }
+    .section-label { color: #000 !important; border-bottom: 1px solid #ccc; }
+    .guide-text { color: #222 !important; }
+    .check-item { background: #fff !important; border: 1px solid #ccc !important; border-top: none !important; page-break-inside: avoid; }
+    .check-item:first-child { border-top: 1px solid #ccc !important; }
+    .check-box { border: 1.5px solid #000 !important; }
+    .check-title { color: #000 !important; }
+    .check-desc { color: #333 !important; }
+    .step-num { color: #000 !important; opacity: 1 !important; }
+    .step-title { color: #000 !important; }
+    .step-desc { color: #333 !important; }
+    .step-item { page-break-inside: avoid; }
+    .wolf-warning { border-left: 3px solid #000 !important; background: #f5f5f5 !important; page-break-inside: avoid; }
+    .wolf-warning-label { color: #000 !important; }
+    .wolf-warning-text { color: #333 !important; }
+    .bottom-verdict { background: #f5f5f5 !important; border: 1px solid #ccc !important; }
+    .bottom-verdict-text { color: #000 !important; font-size: 1.5rem; }
+    .bottom-verdict-sub { color: #333 !important; }
+    .bottom-verdict-label { color: #666 !important; }
+    a { color: #000 !important; text-decoration: underline; }
+    h1, h2, h3 { page-break-after: avoid; }
+    .section { page-break-inside: avoid; }
+  }
+
   /* ── MOBILE ── */
   @media (max-width: 720px) {
     nav { padding: 0 1rem; }
