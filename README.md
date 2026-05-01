@@ -23,10 +23,10 @@ No redesigning, no optimization suggestions unless explicitly requested.
 
 | Site | Repo | Purpose |
 |------|------|---------|
-| nlwolf.com | nlwolf_v3 | Identity Hub |
+| nlwolf.com | nlwolf.com | Identity Hub |
 | wolfstandard.ca | wolfstandard.ca | Reviews + scoring system |
-| wolfpacklounge.com | wolfpacklounge_v2 | Community hub |
-| wolfcommand.ca | wolfcommand_v4 | Gear database |
+| wolfpacklounge.com | wolfpacklounge.com | Community hub |
+| wolfcommand.ca | wolfcommand.ca | Gear database |
 
 **Hosting:** GitHub — NLWolfOfficial  
 **Deployment:** Cloudflare Pages — auto-deploys on every commit. No manual deploy needed.
@@ -70,7 +70,7 @@ Before creating or modifying any review page:
 
 **No exceptions.**
 
-Template file: `wolfstandard-review-template-v2.html`
+Template file: `wolfstandard-review-template.html`
 
 ---
 
@@ -80,12 +80,13 @@ These files must never be rebuilt from scratch — only edited:
 
 | File | Site |
 |------|------|
-| index_NLWolf.html | nlwolf.com |
-| index_Wolf_Standard.html | wolfstandard.ca |
-| index_Wolf_Pack_Lounge.html | wolfpacklounge.com |
-| index_Wolf_Command.html | wolfcommand.ca |
+| index.html | nlwolf.com |
+| index.html | wolfstandard.ca |
+| index.html | wolfpacklounge.com |
+| index.html | wolfcommand.ca |
 
-**Rule:** After every new review → update `index_Wolf_Standard.html` and push it.
+**Rule:** After every new review → update `index.html` on wolfstandard.ca and push it.
+After every new guide or archive item → update `index.html` on wolfcommand.ca and push it.
 
 ---
 
@@ -135,7 +136,7 @@ Each product scored across 5 pillars (1–10 each):
 - Body: Barlow
 
 ### Accessibility
-Minimum text color on dark backgrounds: `#999999`
+Minimum text color on dark backgrounds: `#c0c0c0`
 
 ### Nav (identical on all sites)
 - NL in Blue (#4AB2EF) | WOLF in White
@@ -146,7 +147,7 @@ Minimum text color on dark backgrounds: `#999999`
 
 ## 9. 10 CATEGORIES (same across all sites)
 
-01 Base Camp | 02 Mobility | 03 Command Center | 04 Field Kit  
+01 Home Build | 02 Mobility | 03 Command Center | 04 Field Kit  
 05 Survival & Prep | 06 Body Armor | 07 Wolf Standard Finance  
 08 Outdoors & Field | 09 Gaming & Strategy | 10 Downloads & Archive
 
@@ -249,6 +250,42 @@ These are non-negotiable across every page on all four sites. No exceptions.
 - Step list gap: `2rem` minimum.
 
 **Every new file built from any template must meet these standards before it is considered complete.**
+
+---
+
+## 16. FILE DELIVERY RULE (MANDATORY — 2026-05-01)
+
+Every file Claude delivers must include BOTH locations. No exceptions.
+
+**Format — always state both:**
+
+GitHub (live site): `github.com/NLWolfOfficial/[repo]/upload/main`
+Local (W: drive): `W:\[Site Folder]\[Category Folder]\`
+
+**W: drive site folders:**
+- nlwolf.com → `W:\NLWolf\`
+- wolfstandard.ca → `W:\WolfStandard\`
+- wolfpacklounge.com → `W:\WolfPackLounge\`
+- wolfcommand.ca → `W:\WolfCommand\`
+
+**wolfcommand.ca category folders (must match site structure exactly):**
+- `W:\WolfCommand\01_Home_Build\`
+- `W:\WolfCommand\02_Mobility\`
+- `W:\WolfCommand\03_Command_Center\`
+- `W:\WolfCommand\04_Field_Kit\`
+- `W:\WolfCommand\05_Survival_and_Prep\`
+- `W:\WolfCommand\06_Body_Armor\`
+- `W:\WolfCommand\07_Finance\`
+- `W:\WolfCommand\08_Outdoors_and_Field\`
+- `W:\WolfCommand\09_Gaming_and_Strategy\`
+- `W:\WolfCommand\10_Downloads_and_Archive\`
+  - `W:\WolfCommand\10_Downloads_and_Archive\01_Mobile_Game_Guides\`
+  - `W:\WolfCommand\10_Downloads_and_Archive\02_AI_Tools_and_Workflows\`
+  - `W:\WolfCommand\10_Downloads_and_Archive\03_Security_and_Privacy\`
+  - `W:\WolfCommand\10_Downloads_and_Archive\04_Essential_Software\`
+  - `W:\WolfCommand\10_Downloads_and_Archive\05_Wolf_Pack_Resources\`
+
+If the correct local folder path is uncertain → STOP and ask before delivering.
 
 ---
 
