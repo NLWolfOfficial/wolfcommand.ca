@@ -158,6 +158,24 @@
     .cat-sub:nth-last-child(-n+2) { border-bottom: 1px solid #0f0f0f; }
     .cat-sub:last-child { border-bottom: none; }
   }
+
+  /* LATEST FROM THE PACK */
+  .latest { background: var(--dark2); border-top: 2px solid var(--gold); border-bottom: 1px solid #1a1a1a; padding: 4rem 2rem; }
+  .latest-inner { max-width: 1100px; margin: 0 auto; }
+  .latest-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+  .latest-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2rem, 4vw, 3rem); color: var(--white); margin-bottom: 2rem; line-height: 1; }
+  .latest-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: #1a1a1a; border: 1px solid #1a1a1a; }
+  .latest-card { background: var(--dark); padding: 1.75rem; text-decoration: none; color: inherit; transition: background 0.2s; display: flex; flex-direction: column; gap: 0.75rem; }
+  .latest-card:hover { background: var(--dark3); }
+  .latest-card:hover .latest-card-title { color: var(--blue); }
+  .latest-card-top { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .latest-new { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.2rem 0.6rem; background: var(--gold); color: var(--black); flex-shrink: 0; }
+  .latest-site { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); border: 1px solid var(--blue); padding: 0.2rem 0.6rem; flex-shrink: 0; }
+  .latest-card-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; color: var(--white); line-height: 1.1; letter-spacing: 1px; transition: color 0.2s; }
+  .latest-card-desc { font-size: 0.9rem; color: #c0c0c0; line-height: 1.5; flex: 1; }
+  .latest-card-link { font-family: 'Barlow Condensed', sans-serif; font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-top: auto; }
+  @media (max-width: 720px) { .latest-grid { grid-template-columns: 1fr; } }
+
 </style>
 </head>
 <body>
@@ -477,6 +495,46 @@
     and help decide which categories launch first.
   </p>
   <a href="https://discord.gg/Yy9JabAwEr" class="join-btn">JOIN THE PACK →</a>
+</section>
+
+<!-- LATEST FROM THE PACK -->
+<section class="latest">
+  <div class="latest-inner">
+    <p class="latest-label">Wolf Pack</p>
+    <h2 class="latest-title">Latest From The Pack</h2>
+    <div class="latest-grid">
+
+      <a href="https://wolfcommand.ca/keepass-yubikey-setup-guide.html" class="latest-card">
+        <div class="latest-card-top">
+          <span class="latest-new">New</span>
+          <span class="latest-site">Wolf Command</span>
+        </div>
+        <div class="latest-card-title">Offline Sovereign Security</div>
+        <div class="latest-card-desc">KeePass + YubiKey + pCloud. Full setup guide. You hold the keys — no subscriptions, no corporate middlemen.</div>
+        <div class="latest-card-link">Read the guide →</div>
+      </a>
+
+      <a href="https://wolfstandard.ca/defense-grid-1-2.html" class="latest-card">
+        <div class="latest-card-top">
+          <span class="latest-new">New</span>
+          <span class="latest-site">Wolf Standard</span>
+        </div>
+        <div class="latest-card-title">Defense Grid 1 &amp; 2</div>
+        <div class="latest-card-desc">Alpha Tier — 92/100. Tower defense done right. Two games that earn their place and never waste your time.</div>
+        <div class="latest-card-link">Read the review →</div>
+      </a>
+
+      <a href="https://wolfstandard.ca/leatherman-skeletool-cx.html" class="latest-card">
+        <div class="latest-card-top">
+          <span class="latest-site">Wolf Standard</span>
+        </div>
+        <div class="latest-card-title">Leatherman Skeletool CX</div>
+        <div class="latest-card-desc">Alpha Tier — 86/100. The EDC multitool that actually stays on you. Built right, built light, built to last.</div>
+        <div class="latest-card-link">Read the review →</div>
+      </a>
+
+    </div>
+  </div>
 </section>
 
 <footer>

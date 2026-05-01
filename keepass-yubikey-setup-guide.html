@@ -205,6 +205,12 @@
     .guide-body { grid-template-columns: 1fr; padding: 2rem 1.2rem 3rem; gap: 2rem; }
     .sidebar { order: -1; }
   }
+
+  /* PRINT BUTTON */
+  .print-btn { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; padding: 0.7rem 1.5rem; background: transparent; border: 1px solid #333; color: #c0c0c0; font-family: 'Barlow Condensed', sans-serif; font-size: 0.8rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+  .print-btn:hover { border-color: var(--gold); color: var(--gold); }
+  @media print { .print-btn { display: none; } }
+
 </style>
 </head>
 <body>
@@ -242,6 +248,7 @@
   <h1 class="guide-title">Offline Sovereign Security</h1>
   <p class="guide-subtitle">KeePass + YubiKey + pCloud — Full control of your passwords. No subscriptions. No corporate vaults.</p>
   <p class="verdict-line">Every password manager breach in history happened because someone else held the keys. This setup means only you hold them — backed by hardware, not trust.</p>
+  <button class="print-btn" onclick="window.print()">&#128438; Save as PDF / Print</button>
 </div>
 
 <!-- GUIDE BODY -->
