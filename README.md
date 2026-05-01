@@ -229,18 +229,28 @@ Every content page (guides, checklists, reviews) MUST also include a **Print / S
 
 ## 14B. LATEST FROM THE PACK STRIP (MANDATORY — 2026-05-01)
 
-All 4 site index pages must contain a "Latest From The Pack" strip showing the 3 most recently published items across the entire ecosystem.
+All 4 site index pages contain a "Latest From The Pack" strip showing the 3 most recently published items across the entire ecosystem.
 
-Rules:
-- Strip sits immediately after the hero section on all 4 index pages — NOT at the bottom, NOT above the footer. After the hero. First thing visible after the intro.
+**How it works:**
+- Strip is powered by a single file: `latest.js` hosted at `nlwolf.com/latest.js`
+- All 4 index pages load the strip from this one file via `<script src="https://nlwolf.com/latest.js">`
+- To update the strip on all 4 sites — update `latest.js` only. One file. One upload. Done.
+- Claude updates `latest.js` when new content is published. Tim uploads it to nlwolf.com only.
+
+**Strip rules:**
 - Shows exactly 3 items — most recent first
+- Strip sits immediately after the hero section — NOT at the bottom, NOT above the footer
 - Each item has: NEW gold tag (on the two most recent), site badge, title, short description, direct link
-- Remove the NEW tag from the oldest of the 3 when a new item is added
-- Update all 4 index pages every time new content is published anywhere in the ecosystem
-- Current 3 items (update this list when new content is published):
-  1. Wolf Command — Offline Sovereign Security (keepass-yubikey-setup-guide.html)
-  2. Wolf Standard — Defense Grid 1 & 2 (defense-grid-1-2.html)
-  3. Wolf Standard — Leatherman Skeletool CX (leatherman-skeletool-cx.html)
+- Remove NEW tag from oldest item when a new item is added
+
+**latest.js location:**
+- GitHub: `github.com/NLWolfOfficial/nlwolf.com/upload/main`
+- Local: `W:\NL Wolf\latest.js`
+
+**Current 3 items (Claude updates latest.js when this changes):**
+1. NL Wolf Blog — Offline Sovereign Security (nlwolf.com/offline-sovereign-security.html)
+2. Wolf Command — Offline Sovereign Security Guide (wolfcommand.ca/keepass-yubikey-setup-guide.html)
+3. Wolf Standard — Defense Grid 1 & 2 (wolfstandard.ca/defense-grid-1-2.html)
 
 ---
 
@@ -253,7 +263,16 @@ Every guide, review, or significant piece of content published anywhere in the e
 2. Build a blog post HTML file on nlwolf.com linking to it
 3. Add a blog card to the `#blog` section in nlwolf.com `index.html`
 4. Update the Latest From The Pack strip on all 4 index pages
-5. Post to all socials — Discord, Facebook, X, Reddit, YouTube Community
+5. Post to all socials — Discord, Facebook, X, Reddit, YouTube Community, TikTok, Twitch
+
+**Official platform handles:**
+- Discord: https://discord.gg/Yy9JabAwEr
+- Facebook: WolfPackNLOfficial
+- X: @WolfPackLoungeX
+- Reddit: r/WolfPackLounge
+- YouTube: @NLWolfOfficial
+- TikTok: @nlwolfofficial
+- Twitch: nlwolfofficial
 
 **Blog post file naming:** `topic-name.html` — lowercase, hyphens, same rules as all other HTML files
 **Blog post location:**
