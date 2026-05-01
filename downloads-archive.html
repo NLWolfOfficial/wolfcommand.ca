@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Downloads & Archive — Wolf Command</title>
+<meta name="description" content="The Wolf Pack resource hub. Mobile game guides, AI workflows, security how-tos, vetted tools, and Pack resources. No filler. No fluff. Just what works.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;1,400&family=Barlow+Condensed:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #B8860B;
+    --gold-bright: #D4A017;
+    --blue: #4AB2EF;
+    --blue-glow: rgba(74,178,239,0.1);
+    --black: #000000;
+    --dark: #0A0A0A;
+    --dark2: #0f0f0f;
+    --dark3: #1A1A1A;
+    --silver: #C0C0C0;
+    --white: #F5F0E8;
+    --red: #8B0000;
+    --red-bright: #cc3333;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(0,0,0,0.97);
+    border-bottom: 1px solid var(--blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 56px;
+  }
+
+  .nav-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    text-decoration: none;
+  }
+  .nav-brand .nl { color: var(--blue); }
+  .nav-brand .wolf { color: var(--white); }
+
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    display: block;
+    padding: 0 1.1rem;
+    height: 56px;
+    line-height: 56px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--silver);
+    text-decoration: none;
+    transition: color 0.2s, background 0.2s;
+    border-left: 1px solid #1a1a1a;
+  }
+  .nav-links a:hover { color: var(--blue); background: var(--blue-glow); }
+  .nav-links a.active { color: var(--gold); }
+  .nav-join a {
+    background: var(--blue);
+    color: var(--black) !important;
+    font-weight: 700;
+    border-left: none !important;
+  }
+  .nav-join a:hover { background: #6bc4f5 !important; }
+
+  /* HERO */
+  .hero {
+    padding: 9rem 2rem 5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .hero-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(4rem, 10vw, 8rem);
+    line-height: 0.9;
+    margin-bottom: 0.75rem;
+    color: var(--white);
+  }
+
+  .hero-sub {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.4rem, 3.5vw, 2.2rem);
+    color: var(--gold);
+    letter-spacing: 4px;
+    margin-bottom: 1.5rem;
+  }
+
+  .dual-line-center {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .dual-line-center span { height: 3px; width: 50px; }
+  .dl-blue { background: var(--blue); }
+  .dl-gold { background: var(--gold); }
+
+  .hero-text {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #888;
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .hero-text strong { color: var(--white); }
+
+  /* MAIN WRAPPER */
+  .archive-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 2rem 6rem;
+  }
+
+  /* SECTION BLOCK */
+  .archive-section {
+    margin-bottom: 4rem;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .section-number {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 3.5rem;
+    line-height: 1;
+    color: var(--blue);
+    opacity: 0.25;
+    min-width: 3rem;
+  }
+
+  .section-meta { flex: 1; }
+
+  .section-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin-bottom: 0.3rem;
+  }
+
+  .section-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    line-height: 1;
+    color: var(--white);
+    letter-spacing: 1px;
+  }
+
+  .section-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 0.4rem;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  /* ITEM LIST */
+  .item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .item-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.1rem 1.2rem;
+    background: var(--dark2);
+    border: 1px solid #111;
+    border-top: none;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s, border-color 0.2s;
+    cursor: pointer;
+  }
+
+  .item-row:first-child { border-top: 1px solid #111; }
+  .item-row:hover { background: var(--dark3); border-color: #2a2a2a; }
+  .item-row:hover .item-title { color: var(--blue); }
+
+  .item-icon {
+    font-size: 1.1rem;
+    min-width: 1.5rem;
+    text-align: center;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .item-body { flex: 1; min-width: 0; }
+
+  .item-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--white);
+    text-transform: uppercase;
+    transition: color 0.2s;
+    margin-bottom: 0.15rem;
+  }
+
+  .item-desc {
+    font-size: 0.82rem;
+    color: #666;
+    line-height: 1.4;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  .item-tag {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid;
+    white-space: nowrap;
+  }
+
+  .tag-guide { color: var(--blue); border-color: var(--blue); }
+  .tag-tool { color: var(--gold); border-color: var(--gold); }
+  .tag-doc { color: var(--silver); border-color: #444; }
+  .tag-free { color: #4ecb71; border-color: #4ecb71; }
+
+  /* SECTION 1 — FEATURED (mobile game guides gets bigger treatment) */
+  .section-featured .section-title { color: var(--gold); }
+  .section-featured .section-number { color: var(--gold); opacity: 0.3; }
+  .section-featured .item-row:first-child { border-top: 2px solid var(--gold); }
+
+  /* EMPTY STATE — only shows when section has no items yet */
+  .section-empty {
+    padding: 2rem 1.2rem;
+    background: var(--dark2);
+    border: 1px dashed #1e1e1e;
+    text-align: center;
+  }
+
+  .section-empty p {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #333;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark2);
+    border-top: 1px solid #1a1a1a;
+    padding: 2.5rem 2rem;
+    text-align: center;
+  }
+
+  .footer-brand {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: 3px;
+    margin-bottom: 0.75rem;
+  }
+  .footer-brand .nl { color: var(--blue); }
+  .footer-brand .wolf { color: var(--white); }
+
+  .footer-links {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+  .footer-links a {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #555;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--blue); }
+
+  .footer-copy {
+    font-size: 0.78rem;
+    color: #333;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  /* MOBILE */
+  @media (max-width: 680px) {
+    nav { padding: 0 1rem; }
+    .nav-links { display: none; }
+    .hero { padding: 7rem 1.2rem 3rem; }
+    .archive-wrapper { padding: 1.5rem 1.2rem 4rem; }
+    .section-header { gap: 1rem; }
+    .section-number { font-size: 2.5rem; }
+    .item-row { gap: 1rem; padding: 1rem; }
+    .item-tag { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://nlwolf.com" class="nav-brand"><span class="nl">NL</span><span class="wolf">WOLF</span></a>
+  <ul class="nav-links">
+    <li><a href="https://nlwolf.com">Identity Hub</a></li>
+    <li><a href="https://wolfstandard.ca">The Standard</a></li>
+    <li><a href="https://wolfpacklounge.com">The Den</a></li>
+    <li><a href="https://wolfcommand.ca" class="active">The Command</a></li>
+    <li class="nav-join"><a href="https://wolfpacklounge.com/join">Join The Pack</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <p class="hero-label">Wolf Command — Category 10</p>
+  <h1 class="hero-title">DOWNLOADS<br>&amp; ARCHIVE</h1>
+  <p class="hero-sub">The Wolf Pack Toolkit</p>
+  <div class="dual-line-center">
+    <span class="dl-blue"></span>
+    <span class="dl-gold"></span>
+  </div>
+  <p class="hero-text">
+    No filler. No affiliate bait. No mass lists.<br>
+    <strong>Five categories. Every item vetted.</strong><br>
+    If it's here, it earned its place.
+  </p>
+</section>
+
+<!-- ARCHIVE CONTENT -->
+<main class="archive-wrapper">
+
+  <!-- SECTION 1: MOBILE GAME GUIDES -->
+  <section class="archive-section section-featured">
+    <div class="section-header">
+      <div class="section-number">01</div>
+      <div class="section-meta">
+        <p class="section-tag">Wolf Command // Resource Hub</p>
+        <h2 class="section-title">Mobile Game Guides &amp; Strategies</h2>
+        <p class="section-desc">Full start-to-end guides for mobile games designed to take your money. We break down the mechanics, the dark patterns, and the path to winning without getting played.</p>
+      </div>
+    </div>
+    <div class="item-list">
+      <!-- ADD ITEMS HERE — example structure:
+      <a href="/guides/game-name.html" class="item-row">
+        <div class="item-icon">&#9654;</div>
+        <div class="item-body">
+          <div class="item-title">Game Name — Full Progression Guide</div>
+          <div class="item-desc">Start to endgame. What to build first, where they're trying to take your money, and how to stay ahead without spending.</div>
+        </div>
+        <span class="item-tag tag-guide">Guide</span>
+      </a>
+      -->
+      <div class="section-empty"><p>First guide loading — check back soon</p></div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: AI TOOLS & WORKFLOWS -->
+  <section class="archive-section">
+    <div class="section-header">
+      <div class="section-number">02</div>
+      <div class="section-meta">
+        <p class="section-tag">Wolf Command // Resource Hub</p>
+        <h2 class="section-title">AI Tools &amp; Workflows</h2>
+        <p class="section-desc">Practical AI usage. Prompt frameworks that actually work. No theory, no fluff — workflows you can run today and get more done.</p>
+      </div>
+    </div>
+    <div class="item-list">
+      <!-- ADD ITEMS HERE -->
+      <div class="section-empty"><p>Content loading</p></div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SECURITY & PRIVACY -->
+  <section class="archive-section">
+    <div class="section-header">
+      <div class="section-number">03</div>
+      <div class="section-meta">
+        <p class="section-tag">Wolf Command // Resource Hub</p>
+        <h2 class="section-title">Security &amp; Privacy How-Tos</h2>
+        <p class="section-desc">Real setups for real people. Lock down your accounts, protect your data, and stop relying on corporations to do it for you.</p>
+      </div>
+    </div>
+    <div class="item-list">
+      <!-- ADD ITEMS HERE -->
+      <div class="section-empty"><p>Content loading</p></div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: ESSENTIAL SOFTWARE -->
+  <section class="archive-section">
+    <div class="section-header">
+      <div class="section-number">04</div>
+      <div class="section-meta">
+        <p class="section-tag">Wolf Command // Resource Hub</p>
+        <h2 class="section-title">Essential Software &amp; Utilities</h2>
+        <p class="section-desc">The short list. Tools that run clean, do the job, and don't spy on you. If it's here it passed the test — everything else got cut.</p>
+      </div>
+    </div>
+    <div class="item-list">
+      <!-- ADD ITEMS HERE -->
+      <div class="section-empty"><p>Content loading</p></div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: WOLF PACK RESOURCES -->
+  <section class="archive-section">
+    <div class="section-header">
+      <div class="section-number">05</div>
+      <div class="section-meta">
+        <p class="section-tag">Wolf Command // Resource Hub</p>
+        <h2 class="section-title">Wolf Pack Resources</h2>
+        <p class="section-desc">Internal Pack assets. Templates, checklists, systems, and frameworks built for the community. Tools the Pack actually uses.</p>
+      </div>
+    </div>
+    <div class="item-list">
+      <!-- ADD ITEMS HERE -->
+      <div class="section-empty"><p>Content loading</p></div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand"><span class="nl">NL</span><span class="wolf">WOLF</span></div>
+  <nav class="footer-links">
+    <a href="https://nlwolf.com">Identity Hub</a>
+    <a href="https://wolfstandard.ca">The Standard</a>
+    <a href="https://wolfpacklounge.com">The Den</a>
+    <a href="https://wolfcommand.ca">The Command</a>
+  </nav>
+  <p class="footer-copy">&copy; 2026 NL Wolf. All rights reserved. The wolf doesn't explain himself to the sheep.</p>
+</footer>
+
+</body>
+</html>
