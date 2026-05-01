@@ -260,30 +260,100 @@ Every file Claude delivers must include BOTH locations. No exceptions.
 **Format — always state both:**
 
 GitHub (live site): `github.com/NLWolfOfficial/[repo]/upload/main`
-Local (W: drive): `W:\[Site Folder]\[Category Folder]\`
+Local (W: drive): `W:\[folder]\`
 
-**W: drive site folders:**
-- nlwolf.com → `W:\NLWolf\`
-- wolfstandard.ca → `W:\WolfStandard\`
-- wolfpacklounge.com → `W:\WolfPackLounge\`
-- wolfcommand.ca → `W:\WolfCommand\`
+---
 
-**wolfcommand.ca category folders (must match site structure exactly):**
-- `W:\WolfCommand\01_Home_Build\`
-- `W:\WolfCommand\02_Mobility\`
-- `W:\WolfCommand\03_Command_Center\`
-- `W:\WolfCommand\04_Field_Kit\`
-- `W:\WolfCommand\05_Survival_and_Prep\`
-- `W:\WolfCommand\06_Body_Armor\`
-- `W:\WolfCommand\07_Finance\`
-- `W:\WolfCommand\08_Outdoors_and_Field\`
-- `W:\WolfCommand\09_Gaming_and_Strategy\`
-- `W:\WolfCommand\10_Downloads_and_Archive\`
-  - `W:\WolfCommand\10_Downloads_and_Archive\01_Mobile_Game_Guides\`
-  - `W:\WolfCommand\10_Downloads_and_Archive\02_AI_Tools_and_Workflows\`
-  - `W:\WolfCommand\10_Downloads_and_Archive\03_Security_and_Privacy\`
-  - `W:\WolfCommand\10_Downloads_and_Archive\04_Essential_Software\`
-  - `W:\WolfCommand\10_Downloads_and_Archive\05_Wolf_Pack_Resources\`
+**W:\ — Root structure:**
+- `W:\KeePass\`
+- `W:\NL Wolf\` → Blog, FB Wolf Pack NL
+- `W:\Older Stuff\`
+- `W:\Wolf Pack Lounge\` → Backups, Bot Configs, Discord Backups, Emojis, files, Master Guides, OLD WPL Guides, WolfStandard, WPL Pics, YT vids and voice
+- `W:\Wolf Standard\` → Accountability Files, ATIPP and Research, Review and Scoring Template, wolfstandard.ca
+- `W:\WolfCommand\` → see full structure below
+- `W:\YT\`
+
+---
+
+**W:\WolfCommand\ — Full structure:**
+
+```
+W:\WolfCommand\
+│
+├── 01_Home_Build\
+│   ├── 01_Kitchen_Essentials\
+│   ├── 02_Bathroom_Essentials\
+│   ├── 03_Bedroom_Setup\
+│   ├── 04_Laundry_and_Cleaning\
+│   ├── 05_Tools_and_Repair\
+│   ├── 06_Smart_Home\
+│   └── 07_Security_and_Access\
+│
+├── 02_Mobility\
+│   ├── 01_Vehicle_Loadout\
+│   ├── 02_Tires_and_Wheels\
+│   ├── 03_Navigation_and_Comms\
+│   ├── 04_Power_and_Charging\
+│   └── 05_Bike_and_Alternate\
+│
+├── 03_Command_Center\
+│   ├── 01_PC_Builds_and_Components\
+│   ├── 02_Monitors_and_Displays\
+│   ├── 03_Networking\
+│   ├── 04_Storage_and_NAS\
+│   ├── 05_Peripherals\
+│   ├── 06_Audio_and_Studio\
+│   ├── 07_Security_and_Privacy\
+│   └── 08_Cables_and_Power\
+│
+├── 04_Field_Kit\
+│   ├── 01_Medical_and_IFAK\
+│   ├── 02_Navigation\
+│   ├── 03_Communication\
+│   ├── 04_Cutting_and_Tools\
+│   └── 05_Specialty_Tools\
+│
+├── 05_Survival_and_Prep\
+│   ├── 01_Bug_Out_Bags\
+│   ├── 02_Food_and_Water_Storage\
+│   ├── 03_Shelter_and_Warmth\
+│   ├── 04_Power_and_Light\
+│   └── 05_Security_and_Defense\
+│
+├── 06_Body_Armor\
+│   ├── 01_Plate_Carriers\
+│   ├── 02_Ballistic_Plates\
+│   ├── 03_Helmets\
+│   └── 04_Soft_Armor\
+│
+├── 07_Finance\
+│   ├── 01_Cold_Storage_and_Crypto\
+│   ├── 02_Cash_and_Precious_Metals\
+│   ├── 03_Banking_and_Accounts\
+│   ├── 04_Insurance\
+│   └── 05_Investment\
+│
+├── 08_Outdoors_and_Field\
+│   ├── 01_Camping_and_Backpacking\
+│   ├── 02_Hunting_and_Fishing\
+│   ├── 03_Rucking_and_Fitness\
+│   ├── 04_Winter_Operations\
+│   └── 05_Water_Operations\
+│
+├── 09_Gaming_and_Strategy\
+│   ├── 01_PC_Gaming_Setup\
+│   ├── 02_Console_Setup\
+│   ├── 03_Mobile_and_Handheld\
+│   ├── 04_Streaming_Setup\
+│   └── 05_Gaming_Chair_and_Desk\
+│
+└── 10_Downloads_and_Archive\
+    ├── 01_Mobile_Game_Guides\
+    ├── 02_AI_Tools_and_Workflows\
+    ├── 03_Security_and_Privacy\
+    ├── 04_Essential_Software\
+    └── 05_Wolf_Pack_Resources\
+```
 
 If the correct local folder path is uncertain → STOP and ask before delivering.
 
